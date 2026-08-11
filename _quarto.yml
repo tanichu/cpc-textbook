@@ -1,0 +1,29 @@
+project:
+  type: book
+  output-dir: docs
+
+book:
+  title: "Collective Predictive Coding"
+  subtitle: "An Introduction to the Mathematical Theory of Symbol Emergence Systems"
+  author: "Tadahiro Taniguchi"
+  date: last-modified
+  search: true
+  repo-url: https://github.com/tanichu/cpc-textbook
+  repo-actions: [issue]
+  sidebar:
+    style: docked
+  page-footer:
+    left: "© 2026 Tadahiro Taniguchi"
+    right: "Work in progress. Please do not cite or redistribute."
+  chapters:
+    - index.qmd
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    html-math-method: katex
+  pdf:
+    documentclass: scrbook
+    papersize: a4
+    keep-tex: true
