@@ -1,3 +1,8 @@
+# Internal planning notes and collected source papers.
+# Never published: the repository is intended to go public.
+_planning/
+_sources/
+
 .quarto/
 docs/
 _book/
