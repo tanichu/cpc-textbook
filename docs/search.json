@@ -1,0 +1,152 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Collective Predictive Coding",
+    "section": "",
+    "text": "0.1 What this book is\nCollective Predictive Coding (CPC) is presented here as a mathematical theory of symbol emergence systems. The book has three aims:",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Collective Predictive Coding</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#what-this-book-is",
+    "href": "index.html#what-this-book-is",
+    "title": "Collective Predictive Coding",
+    "section": "",
+    "text": "To give CPC a systematic mathematical formulation as a theory of symbol emergence systems.\nTo unify formulations that are currently scattered across individual papers, deriving them as successive elaborations of a single generative model.\nTo be usable as a foundational text beyond robotics — for CPC-MS and, more broadly, for theories of symbol systems and intelligence.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Collective Predictive Coding</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#positioning",
+    "href": "index.html#positioning",
+    "title": "Collective Predictive Coding",
+    "section": "0.2 Positioning",
+    "text": "0.2 Positioning\nCPC is not a theory of symbol emergence. It is a theory of symbol emergence systems. Its object is not only the process by which symbols arise, but the system in which the cognitive dynamics of individuals and the dynamics of a society’s symbol system organize each other.\nThree terms are kept distinct throughout the book:\n\n\n\n\n\n\n\nTerm\nWhat it refers to\n\n\n\n\nSymbol system\nThe product of emergence. Corresponds to w.\n\n\nSymbol emergence\nThe process by which it arises.\n\n\nSymbol emergence system\nThe system in which that process takes place.\n\n\n\nThe Springer book Symbol Emergence Systems discusses what such systems are and how they look as a whole; this book supplies their mathematics. The two are companion volumes.\nThis book is not a general survey of symbol emergence in robotics. Not repeating the structure of Symbol Emergence in Robotics is an explicit constraint on its design.\n\n0.2.1 Intended readers\n\nPrimary: graduate students and researchers in informatics, cognitive science, and robotics.\nSecondary: graduate students in linguistics, anthropology, sociology, science studies, and economics.\n\nVariational Bayes is assumed as the lower bound of mathematical background; mathematical preliminaries are collected in the appendices rather than in the main text.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Collective Predictive Coding</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#the-core-formulation",
+    "href": "index.html#the-core-formulation",
+    "title": "Collective Predictive Coding",
+    "section": "0.3 The core formulation",
+    "text": "0.3 The core formulation\nThe whole book is organized around one generative model,\n\np(w) \\prod_{k=1}^{K} p(z_k \\mid w)\\, p(x_k \\mid z_k),\n\nand the collective posterior it induces,\n\nP(w \\mid x_{1:K}) \\;\\propto\\; p(w) \\prod_{k=1}^{K} \\int p(x_k \\mid z_k)\\, p(z_k \\mid w)\\, \\mathrm{d}z_k .\n\nTwo constraints give this model its meaning:\nOperational closure. Agent k has no access whatsoever to z_j for j \\neq k.\nArbitrariness. The relation between w and z is not an invertible map but a general probabilistic relation P(w \\mid z). Dimensions and types need not agree, and w may be discrete or continuous.\nChapters 1 and 2 state this formulation. Every later chapter can be read as a commentary on Chapter 2 — extensions are presented as differences from it: put w_{1:T} into the equation, multiply in an optimality-variable term, let w be continuous.\nEach chapter is built around a single proposition, typically of the form: language game G is a correct inference algorithm for the posterior of generative model \\mathcal{M}. The theory is the collection of these propositions.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Collective Predictive Coding</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#how-to-read-it",
+    "href": "index.html#how-to-read-it",
+    "title": "Collective Predictive Coding",
+    "section": "0.4 How to read it",
+    "text": "0.4 How to read it\nReaders who do not want to follow the mathematics can read\n\nChapters 1–2 → Chapter 13 → Chapter 24 → Part VI → Chapter 31\n\nand skip the rest. This is a legitimate path through the book, not a shortcut. Every chapter opens with an intuitive summary in one paragraph and no equations, Appendix D gives a correspondence table between humanities/social-science and mathematical vocabulary, and Part VI does not depend on Part II.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Collective Predictive Coding</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#table-of-contents",
+    "href": "index.html#table-of-contents",
+    "title": "Collective Predictive Coding",
+    "section": "0.5 Table of contents",
+    "text": "0.5 Table of contents\n\n\n\n\n\n\nNoteProvisional\n\n\n\nChapter titles below are provisional English renderings of the plan and will be revised.\n\n\nFront matter\n\nPrologue — How to Read This Book\n\nThe Symbol Emergence Problem and Two Constraints\n\n\nThe Core Formulation\n\n\nPart I — Routes of Arrival (showing that the equation of Chapter 2 is not handed down from nowhere)\n\n\nIndividual-Level Generative Models and Representation Learning\n\n\nFrom Joint Attention to Mean Field, and on to CPC\n\n\nAxiomatizing the Uniqueness and Distributedness of the Generative Model\n\n\nPart II — Inference Algorithms as Language Games\n\n\nThe Metropolis–Hastings Naming Game\n\n\nGeneralization and Recursive MHNG\n\n\nThe Joint Attention Naming Game\n\n\nThe Variational Bayes Naming Game\n\n\nContinuous Spaces, Gaussian Processes, and the Emergence of Discreteness\n\n\nDeep Generative Models and Amortized Inference\n\n\nLangevin Dynamics and Collective Sampling\n\n\nPart III — Collective Free Energy\n\n\nPredictive Coding and the Free Energy Principle\n\n\nDecomposition and the Non-Additivity Theorem\n\n\nPhase Structure and Finite-N Corrections\n\n\nPart IV — Action and Multi-Agent Systems\n\n\nActive Inference\n\n\nControl as Inference\n\n\nSequential CPC and Collective World Models\n\n\nGenerative EmCom\n\n\nMARL-CPC\n\n\nDecentralized Collective World Models and Cooperation\n\n\nCollective Predictive Coding in Robotics\n\n\nAre Large Language Models Collective World Models?\n\n\nSystem 0/1/2/3 and Collective Active Inference\n\n\nPart V — Analysis of Properties\n\n\nArbitrariness and Identifiability\n\n\nCompositionality\n\n\nInformation-Theoretic Quantities\n\n\nConvergence and Finite N\n\n\nPart VI — Isomorphic Systems\n\n\nEmotion: Interoception and a Shared Emotional Vocabulary\n\n\nScience, Markets, Qualia, and Ritual\n\n\nPart VII\n\n\nOpen Problems\n\n\nAppendices\n\nA. Variational Inference\nB. Markov Chain Monte Carlo\nC. Notation\nD. Glossary: Humanities and Social Sciences ↔︎ Mathematics\nE. A Guide to the Literature: Where to Start",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Collective Predictive Coding</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#status",
+    "href": "index.html#status",
+    "title": "Collective Predictive Coding",
+    "section": "0.6 Status",
+    "text": "0.6 Status\nWriting volume and verification are tracked as two separate axes. They are not combined into a single percentage, because drafting can run ahead of checking.\nWriting volume — ⬜ not started / ◽ outline only / ◨ partially written / ⬛ full draft\nVerification — 🤖 raw AI output (correctness not guaranteed in any way) / 👀 visually checked / ✅ author-verified\n\n\n\n\n\n\nWarningCurrent status\n\n\n\nAll chapters are between ⬜ and ◽, and all are 🤖. Nothing on this site has been verified by the author. Per-chapter status badges will be added as writing begins.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Collective Predictive Coding</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#comments-and-corrections",
+    "href": "index.html#comments-and-corrections",
+    "title": "Collective Predictive Coding",
+    "section": "0.7 Comments and corrections",
+    "text": "0.7 Comments and corrections\nCorrections and suggestions are welcome — typographical errors, mistakes in the mathematics, and proposals for the content alike. Comments may be written in English or Japanese.\n\nOpen an issue: https://github.com/tanichu/cpc-textbook/issues\n\nTerms, in brief:\n\nThe author reserves the right to reflect any comment or suggestion in the published book. No compensation or claim of co-authorship arises from making one.\nContributors will be named in the acknowledgements.\n\nAdditional channels (threaded discussion attached to each chapter, inline annotation, an anonymous form) are under consideration and are not yet available.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Collective Predictive Coding</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#license",
+    "href": "index.html#license",
+    "title": "Collective Predictive Coding",
+    "section": "0.8 License",
+    "text": "0.8 License\nNot yet decided. Until a license is announced, all rights are reserved: please do not redistribute or create derivative works. The intention is to choose a license that does not conflict with the eventual Springer publication.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Collective Predictive Coding</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#citing-this-work",
+    "href": "index.html#citing-this-work",
+    "title": "Collective Predictive Coding",
+    "section": "0.9 Citing this work",
+    "text": "0.9 Citing this work\nPlease do not cite it yet. There is nothing here stable enough to cite. A DOI will be issued when a citable draft is released.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Collective Predictive Coding</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/00-how-to-read.html",
+    "href": "chapters/00-how-to-read.html",
+    "title": "2  Prologue: How to Read This Book",
+    "section": "",
+    "text": "2.1 Who this book is for\nThis book is written first for graduate students and researchers in informatics, cognitive science, and robotics. If you have met variational Bayes and Markov chain Monte Carlo before, even briefly, you have what you need; the appendices supply the rest.\nIt is written second, and deliberately, for graduate students in linguistics, anthropology, sociology, science studies, and economics. That second audience is not an afterthought. The central claim of this book is that symbol emergence systems are a single kind of object, and that the mathematics of that object does not care whether the symbols in question are words, prices, scientific concepts, or names for feelings. If that claim is right, then the people who study those systems from the outside should be able to reach the mathematics. Making that reachable is a design problem for the book, not a matter of goodwill.\nI have not solved that problem by lowering the mathematical level. The equations are the content, and softening them would leave nothing behind. I have tried to solve it structurally: by front-loading the core, by making every later chapter a marked difference from that core, by opening each chapter with a paragraph that states its claim without symbols, and by providing a glossary that maps the vocabulary of the humanities and social sciences onto the variables of the model.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Prologue: How to Read This Book</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/00-how-to-read.html#reading-paths",
+    "href": "chapters/00-how-to-read.html#reading-paths",
+    "title": "2  Prologue: How to Read This Book",
+    "section": "2.2 Reading paths",
+    "text": "2.2 Reading paths\nIf you want the argument without the derivations, read:\n\nChapters 1 and 2 → Chapter 13 → Chapter 24 → Part VI → Chapter 31\n\nThat is roughly a hundred pages. It will give you the problem, the core formulation, the connection to predictive coding and the free energy principle, the layered picture of cognition across timescales, the isomorphic systems, and the open problems. You will not have seen why the core formulation is the right one, and you will have to take the theorems on trust, but you will not be missing the point.\nI want to be explicit that this is a legitimate way to read the book, not a concession. Readers skip; the only question is whether they skip with a map or without one. Everything in Parts I through V is there because someone will want it, and no chapter in those parts is a prerequisite for the path above.\nIf you want the mathematics, read Part I onward in order. Part I earns the formulation of Chapter 2, Part II supplies the algorithms, Part III the energetics, Part IV action and multiple agents, Part V the properties of the resulting systems.\nIf you came from a specific application — from economics, from science studies, from affective science — go to Part VI first and work backwards when a chapter stops making sense. Part VI is written so that it does not depend on Part II. This costs some repetition, which I consider a fair price.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Prologue: How to Read This Book</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/00-how-to-read.html#how-the-book-is-built",
+    "href": "chapters/00-how-to-read.html#how-the-book-is-built",
+    "title": "2  Prologue: How to Read This Book",
+    "section": "2.3 How the book is built",
+    "text": "2.3 How the book is built\nOne chapter, one proposition. Most chapters are organized around a single claim, and most of those claims have the same shape: language game G is a correct inference algorithm for the posterior of generative model \\mathcal{M}. The theory presented here is not a narrative but the collection of these propositions. Where a chapter has no such proposition, it is doing preparatory or interpretive work, and says so.\nChapters 1 and 2 carry the core. Chapter 1 states the problem and the two constraints that every later chapter must respect. Chapter 2 gives the generative model and the collective posterior it induces. Everything after Chapter 2 can be read as a commentary on Chapter 2.\nExtensions are shown as differences. When a later chapter extends the model, it does so by modifying the equation of Chapter 2 in a stated way: put w_{1:T} in place of w; multiply in a term for the optimality variable; let w range over a continuous space. The same equation returns at the head of each such chapter, so that it is always clear what has changed and what has not. This is why the book can afford to be long without becoming hard to navigate.\nEach chapter opens with a summary in words. One paragraph, no symbols, stating what the chapter claims. These are not decoration. If you read only those paragraphs you will have a correct, if thin, account of the whole theory.\nMathematical preparation is in the appendices. Appendix A covers variational inference and Appendix B covers Markov chain Monte Carlo. Neither is a substitute for a course, and both are there so that the main text does not have to stop and explain. Appendix C fixes notation. Appendix D is the glossary between the humanities and social sciences and the mathematics. Appendix E is a guide to the primary literature, organized by where you are coming from.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Prologue: How to Read This Book</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/00-how-to-read.html#a-word-about-the-state-of-this-text",
+    "href": "chapters/00-how-to-read.html#a-word-about-the-state-of-this-text",
+    "title": "2  Prologue: How to Read This Book",
+    "section": "2.4 A word about the state of this text",
+    "text": "2.4 A word about the state of this text\nThis book is being written in the open, and it is not finished. Nothing in it should be cited yet.\nEach chapter carries two independent marks, one for how much of it has been written and one for how far it has been checked. They are kept separate on purpose. Drafting can now run far ahead of verification, and a single combined percentage would hide exactly the gap that matters. A chapter can be complete in length and still be unverified prose; you are entitled to know which.\nWriting — ⬜ not started · ◽ outline only · ◨ partially written · ⬛ full draft\nVerification — 🤖 raw AI output · 👀 visually checked · ✅ author-verified\nA chapter marked 🤖 makes no claim to correctness of any kind. Its derivations may be wrong, its citations may be wrong, and its propositions may not be the ones the finished book will contain. When a chapter reaches ✅, the derivations and the citations in it have been checked by me.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Prologue: How to Read This Book</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/00-how-to-read.html#a-note-on-scope",
+    "href": "chapters/00-how-to-read.html#a-note-on-scope",
+    "title": "2  Prologue: How to Read This Book",
+    "section": "2.5 A note on scope",
+    "text": "2.5 A note on scope\nThis book is a mathematical theory of symbol emergence systems. It is not a survey of symbol emergence in robotics, and I have avoided reproducing the structure of the earlier survey literature. It is also not an introduction to the free energy principle, though Chapter 13 explains the relationship. The mathematics of Parts I and II closes with variational inference and MCMC alone, and does not depend on whether the free energy principle is true.\nCorrections and objections are welcome, in English or Japanese, while the book is still in draft. That is the reason it is in the open.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Prologue: How to Read This Book</span>"
+    ]
+  }
+]

@@ -5,10 +5,13 @@ _sources/
 _notion/
 
 .quarto/
-docs/
+# docs/ is committed: GitHub Pages serves main /docs
 _book/
 *.log
 *.aux
 *.out
 .DS_Store
 Thumbs.db
+
+/.quarto/
+**/*.quarto_ipynb
