@@ -2,6 +2,7 @@
 # Never published: the repository is intended to go public.
 _planning/
 _sources/
+_notion/
 
 .quarto/
 docs/
