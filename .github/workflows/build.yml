@@ -35,13 +35,10 @@ jobs:
         with:
           path: docs
 
-      # Japanese typesetting needs LuaTeX-ja and the Harano Aji fonts.
-      # TinyTeX ships neither, and a missing font is not something Quarto's
-      # auto-install recovers from, so install them explicitly.
-      - name: Install the Japanese LaTeX packages
-        continue-on-error: true
-        run: tlmgr install luatexja haranoaji
-
+      # Japanese typesetting needs LuaTeX-ja and the Harano Aji fonts, which
+      # TinyTeX does not ship. Quarto's auto-install pulls both during the
+      # render, so no explicit tlmgr step is needed.
+      #
       # The PDF is best-effort: a LaTeX failure must not block the site.
       - name: Render PDF
         id: pdf
