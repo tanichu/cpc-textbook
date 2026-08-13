@@ -35,14 +35,49 @@ jobs:
         with:
           path: docs
 
+      # Japanese typesetting needs LuaTeX-ja and the Harano Aji fonts.
+      # TinyTeX ships neither, and a missing font is not something Quarto's
+      # auto-install recovers from, so install them explicitly.
+      - name: Install the Japanese LaTeX packages
+        continue-on-error: true
+        run: tlmgr install luatexja haranoaji
+
       # The PDF is best-effort: a LaTeX failure must not block the site.
       - name: Render PDF
         id: pdf
         continue-on-error: true
         run: quarto render --to pdf
 
-      - name: Attach PDF to the "latest" release
+      # A PDF with no Japanese in it is worse than no PDF, so check before
+      # publishing. The book is written in Japanese; a healthy build is well
+      # over half Japanese characters.
+      - name: Check that the PDF contains Japanese
+        id: pdfcheck
         if: steps.pdf.outcome == 'success'
+        run: |
+          python3 -m pip install --quiet pypdf
+          python3 - <<'EOF'
+          import glob, sys
+          import pypdf
+          paths = glob.glob("docs/*.pdf")
+          if not paths:
+              sys.exit("no PDF was produced")
+          text = "".join(
+              (page.extract_text() or "")
+              for page in pypdf.PdfReader(paths[0]).pages
+          )
+          jp = sum(
+              1 for c in text
+              if "぀" <= c <= "ヿ" or "一" <= c <= "鿿"
+          )
+          ratio = jp / max(len(text), 1)
+          print(f"{paths[0]}: {jp} Japanese characters, ratio {ratio:.3f}")
+          if ratio < 0.2:
+              sys.exit("the PDF lost its Japanese text; not publishing it")
+          EOF
+
+      - name: Attach PDF to the "latest" release
+        if: steps.pdf.outcome == 'success' && steps.pdfcheck.outcome == 'success'
         continue-on-error: true
         uses: softprops/action-gh-release@v2
         with:

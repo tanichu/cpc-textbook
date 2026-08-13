@@ -43,6 +43,10 @@ format:
     html-math-method: katex
     include-after-body: _includes/date-link.html
   pdf:
-    documentclass: scrbook
+    # 和文組版: LuaTeX-ja。原ノ味フォントは TeX Live 同梱なので追加フォント不要
+    pdf-engine: lualatex
+    documentclass: ltjsbook
     papersize: a4
+    classoption:
+      - 11pt
     keep-tex: true
