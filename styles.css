@@ -14,7 +14,7 @@
 }
 
 /* 2枚目を1枚目に重ね、透明度だけを動かす。
-   20秒周期＝各9秒表示＋1秒フェード。 */
+   20秒周期＝各7秒静止＋3秒フェード。切り替わりは10秒ごと。 */
 .banner-fade img + img {
   position: absolute;
   top: 0;
@@ -24,11 +24,11 @@
 
 @keyframes banner-crossfade {
   0%,
-  45% {
+  35% {
     opacity: 0;
   }
   50%,
-  95% {
+  85% {
     opacity: 1;
   }
   100% {
