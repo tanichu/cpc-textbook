@@ -54,7 +54,7 @@ translation.** Please do not cite, quote, or redistribute anything from this sit
 
 - [第1章　記号創発システムの考え方](chapters/01-symbol-emergence-systems.qmd)
 - [第2章　数理の導入](chapters/02-the-mathematics.qmd)
-- 第3章　Metropolis–Hastings 名付けゲームの考え方
+- [第3章　Metropolis–Hastings 名付けゲームの考え方](chapters/03-mhng-idea.qmd)
 
 **第II部　確率的生成モデルとグラウンディング**
 
