@@ -38,7 +38,7 @@ translation.** Please do not cite, quote, or redistribute anything from this sit
 
 **Preface**
 
-- 人類の知能、認知的閉鎖と恣意的な記号
+- はじめに――人類の知能、認知的閉鎖と記号の恣意性
 
 **第I部　記号創発システムと分散型ベイズ推論**
 
@@ -108,7 +108,6 @@ translation.** Please do not cite, quote, or redistribute anything from this sit
 **第VI部　経済学**
 
 - 第30章　経済学の準備：価格メカニズムと双対分解
-- 儀礼　※章として持つかは未決
 
 **第VII部　Open Challenges & Questions**
 

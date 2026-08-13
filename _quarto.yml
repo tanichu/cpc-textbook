@@ -26,8 +26,10 @@ book:
     right: "執筆中のドラフトです。引用・転載はお控えください。"
   chapters:
     - index.qmd
+    - chapters/00-preface.qmd
     - chapters/00-how-to-read.qmd
   appendices:
+    - chapters/98-glossary-humanities.qmd
     - chapters/99-glossary-ja-en.qmd
 
 format:
