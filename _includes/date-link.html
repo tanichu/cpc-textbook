@@ -1,0 +1,19 @@
+<script>
+// タイトルブロックの更新日時を、GitHub の更新履歴（コミット一覧）へのリンクにする。
+document.addEventListener("DOMContentLoaded", function () {
+  var historyUrl = "https://github.com/tanichu/cpc-textbook/commits/main/";
+  document.querySelectorAll(".quarto-title-meta p.date").forEach(function (el) {
+    if (el.querySelector("a")) return;
+    var text = el.textContent.trim();
+    if (!text) return;
+    var a = document.createElement("a");
+    a.href = historyUrl;
+    a.target = "_blank";
+    a.rel = "noopener";
+    a.title = "更新履歴を見る（GitHub のコミット一覧）";
+    a.textContent = text;
+    el.textContent = "";
+    el.appendChild(a);
+  });
+});
+</script>

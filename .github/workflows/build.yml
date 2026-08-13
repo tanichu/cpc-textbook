@@ -17,6 +17,9 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    # The title block shows a last-modified timestamp; render it in JST.
+    env:
+      TZ: Asia/Tokyo
     steps:
       - uses: actions/checkout@v4
 
