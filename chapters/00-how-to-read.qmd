@@ -1,113 +1,59 @@
-# Prologue: How to Read This Book {.unnumbered}
+# 序章　本書の読み方 {.unnumbered}
 
 ::: {.callout-note appearance="simple"}
-**Status** — Writing: ⬛ full draft · Verification: 🤖 raw AI output
+**ステータス** — 執筆量: ⬛ 一通り執筆 ・ 検証: 🤖 AI出力のまま
 
-This chapter has not been checked by the author. Treat every claim in it as unverified.
+この章はまだ著者による確認を受けていない。書かれていることをすべて未検証として扱ってほしい。
 :::
 
-## Who this book is for
+## 誰のための本か
 
-This book is written first for graduate students and researchers in informatics, cognitive
-science, and robotics. If you have met variational Bayes and Markov chain Monte Carlo before,
-even briefly, you have what you need; the appendices supply the rest.
+本書は第一に、情報学・認知科学・ロボティクスの大学院生と研究者のために書かれている。変分ベイズとマルコフ連鎖モンテカルロ法に、たとえ短くでも触れたことがあれば、必要な準備は足りている。足りない分は付録が補う。
 
-It is written second, and deliberately, for graduate students in linguistics, anthropology,
-sociology, science studies, and economics. That second audience is not an afterthought. The
-central claim of this book is that symbol emergence systems are a single kind of object, and
-that the mathematics of that object does not care whether the symbols in question are words,
-prices, scientific concepts, or names for feelings. If that claim is right, then the people
-who study those systems from the outside should be able to reach the mathematics. Making that
-reachable is a design problem for the book, not a matter of goodwill.
+そして第二に——これは意図的な設計として——言語学・人類学・社会学・科学論・経済学の大学院生のために書かれている。この第二の読者は付け足しではない。本書の中心的な主張は、記号創発システムがひとつの種類の対象であり、その対象の数理は、問題の記号が語であるか、価格であるか、科学的概念であるか、感情の名前であるかを区別しない、というものである。この主張が正しいなら、それらの系を外側から研究している人々が、この数理に手が届かなければおかしい。届くようにすることは、本の設計の問題であって、善意の問題ではない。
 
-I have not solved that problem by lowering the mathematical level. The equations are the
-content, and softening them would leave nothing behind. I have tried to solve it structurally:
-by front-loading the core, by making every later chapter a marked difference from that core,
-by opening each chapter with a paragraph that states its claim without symbols, and by
-providing a glossary that maps the vocabulary of the humanities and social sciences onto the
-variables of the model.
+その問題を、数学の水準を下げることでは解決していない。数式こそが内容であり、それを薄めれば何も残らない。かわりに構造で解決を試みた。中核を最初に置くこと。後続のすべての章を、その中核からの明示された差分にすること。各章の冒頭に、記号を使わずにその章の主張を述べる一段落を置くこと。そして、人文社会系の語彙をモデルの変数に対応づける用語対応表を用意することである。
 
-## Reading paths
+## 読み筋
 
-**If you want the argument without the derivations**, read:
+**導出を追わずに議論の骨格だけを知りたい読者**は、次の順で読めばよい。
 
-> Chapters 1 and 2 → Chapter 13 → Chapter 24 → Part VI → Chapter 31
+> 第1・2章 → 第13章 → 第24章 → 第VI部 → 第31章
 
-That is roughly a hundred pages. It will give you the problem, the core formulation, the
-connection to predictive coding and the free energy principle, the layered picture of
-cognition across timescales, the isomorphic systems, and the open problems. You will not have
-seen why the core formulation is the right one, and you will have to take the theorems on
-trust, but you will not be missing the point.
+およそ百ページである。問題設定、中核の定式化、予測符号化・自由エネルギー原理との接続、時間スケールを跨ぐ認知の層構造、同型な系たち、そして未解決問題が手に入る。中核の定式化がなぜ正しい形なのかは見ないままになり、定理は信用で受け取ることになるが、要点を外すことはない。
 
-I want to be explicit that this is a legitimate way to read the book, not a concession.
-Readers skip; the only question is whether they skip with a map or without one. Everything in
-Parts I through V is there because someone will want it, and no chapter in those parts is a
-prerequisite for the path above.
+これが譲歩ではなく正当な読み方であることを、はっきり述べておきたい。読者は飛ばすものである。問題は、地図を持って飛ばすか、持たずに飛ばすかだけだ。第I部から第V部にあるものはすべて、誰かがそれを必要とするから置かれているのであって、上の読み筋の前提条件になっている章はひとつもない。
 
-**If you want the mathematics**, read Part I onward in order. Part I earns the formulation of
-Chapter 2, Part II supplies the algorithms, Part III the energetics, Part IV action and
-multiple agents, Part V the properties of the resulting systems.
+**数理を目的とする読者**は、第I部から順に読む。第I部が第2章の定式化を根拠づけ、第II部がアルゴリズムを与え、第III部がエネルギー論を、第IV部が行動とマルチエージェントを、第V部が結果として得られる系の性質を扱う。
 
-**If you came from a specific application** — from economics, from science studies, from
-affective science — go to Part VI first and work backwards when a chapter stops making sense.
-Part VI is written so that it does not depend on Part II. This costs some repetition, which I
-consider a fair price.
+**特定の応用から来た読者**——経済学から、科学論から、感情科学から——は、まず第VI部へ行き、わからない章にぶつかったら遡ればよい。第VI部は第II部に依存しないように書かれている。この設計は多少の重複を代償とするが、公正な価格だと考えている。
 
-## How the book is built
+## 本書の作り
 
-**One chapter, one proposition.** Most chapters are organized around a single claim, and most
-of those claims have the same shape: *language game $G$ is a correct inference algorithm for
-the posterior of generative model $\mathcal{M}$*. The theory presented here is not a narrative
-but the collection of these propositions. Where a chapter has no such proposition, it is doing
-preparatory or interpretive work, and says so.
+**一章一命題。**ほとんどの章はひとつの主張を軸に組織され、その主張の多くは同じ形をしている——*言語ゲーム $G$ は生成モデル $\mathcal{M}$ の事後分布に対する正しい推論アルゴリズムである*。本書が提示する理論は物語ではなく、これらの命題の集合である。そのような命題を持たない章は、準備または解釈の仕事をしており、そのことを章内で明言する。
 
-**Chapters 1 and 2 carry the core.** Chapter 1 states the problem and the two constraints that
-every later chapter must respect. Chapter 2 gives the generative model and the collective
-posterior it induces. Everything after Chapter 2 can be read as a commentary on Chapter 2.
+**第1・2章が中核を担う。**第1章が問題と、以降のすべての章が守るべき二つの制約を述べる。第2章が生成モデルと、それが誘導する集合事後分布を与える。第2章より後のすべては、第2章への注釈として読める。
 
-**Extensions are shown as differences.** When a later chapter extends the model, it does so by
-modifying the equation of Chapter 2 in a stated way: put $w_{1:T}$ in place of $w$; multiply in
-a term for the optimality variable; let $w$ range over a continuous space. The same equation
-returns at the head of each such chapter, so that it is always clear what has changed and what
-has not. This is why the book can afford to be long without becoming hard to navigate.
+**拡張は差分で示す。**後続の章がモデルを拡張するときは、第2章の式を明示された仕方で変更する。$w$ の代わりに $w_{1:T}$ を入れる。最適性変数の項を掛ける。$w$ の動く範囲を連続空間にする。同じ式がそのたびに章の冒頭に戻ってくるので、何が変わって何が変わっていないかが常に明確である。本書が長さのわりに迷子になりにくいのは、この作りによる。
 
-**Each chapter opens with a summary in words.** One paragraph, no symbols, stating what the
-chapter claims. These are not decoration. If you read only those paragraphs you will have a
-correct, if thin, account of the whole theory.
+**各章は言葉による要約で始まる。**一段落、記号なしで、その章が何を主張するかを述べる。これは飾りではない。その段落だけを拾い読みしても、薄いながら正確な理論の全体像が得られる。
 
-**Mathematical preparation is in the appendices.** Appendix A covers variational inference and
-Appendix B covers Markov chain Monte Carlo. Neither is a substitute for a course, and both are
-there so that the main text does not have to stop and explain. Appendix C fixes notation.
-Appendix D is the glossary between the humanities and social sciences and the mathematics.
-Appendix E is a guide to the primary literature, organized by where you are coming from.
+**数学的準備は付録にある。**付録Aが変分推論を、付録BがMCMCを扱う。どちらも講義の代わりにはならないが、本文が立ち止まって説明せずに済むためにある。付録Cが記法を定め、付録Dが人文社会系と数理のあいだの用語対応表であり、付録Eが読者の出発点別に整理した一次文献への案内である。
 
-## A word about the state of this text
+## この文章の現状について
 
-This book is being written in the open, and it is not finished. Nothing in it should be cited
-yet.
+本書は公開の場で書かれており、完成していない。**まだ何も引用しないでほしい。**
 
-Each chapter carries two independent marks, one for how much of it has been written and one
-for how far it has been checked. They are kept separate on purpose. Drafting can now run far
-ahead of verification, and a single combined percentage would hide exactly the gap that
-matters. A chapter can be complete in length and still be unverified prose; you are entitled
-to know which.
+各章は二つの独立した印を持つ。どれだけ書かれたかの印と、どこまで確認されたかの印である。二つをわざと分けている。いまや起草は検証よりはるかに先行しうるのであって、一つに合成された進捗率は、まさに問題となる差を隠してしまう。分量として完成していながら未検証の文章である、ということが章には起こりうる。読者にはどちらなのかを知る権利がある。
 
-**Writing** — ⬜ not started · ◽ outline only · ◨ partially written · ⬛ full draft
+**執筆量** — ⬜ 未着手 ・ ◽ 骨子のみ ・ ◨ 部分執筆 ・ ⬛ 一通り執筆
 
-**Verification** — 🤖 raw AI output · 👀 visually checked · ✅ author-verified
+**検証** — 🤖 AI出力のまま ・ 👀 目視確認済 ・ ✅ 著者検証済
 
-A chapter marked 🤖 makes no claim to correctness of any kind. Its derivations may be wrong,
-its citations may be wrong, and its propositions may not be the ones the finished book will
-contain. When a chapter reaches ✅, the derivations and the citations in it have been checked
-by me.
+🤖 の付いた章は、いかなる種類の正しさも主張しない。導出は誤っているかもしれず、引用は誤っているかもしれず、命題は完成した本が含むものと違うかもしれない。章が ✅ に達したとき、その章の導出と引用は著者が確認している。
 
-## A note on scope
+## 射程についての注意
 
-This book is a mathematical theory of symbol emergence *systems*. It is not a survey of symbol
-emergence in robotics, and I have avoided reproducing the structure of the earlier survey
-literature. It is also not an introduction to the free energy principle, though Chapter 13
-explains the relationship. The mathematics of Parts I and II closes with variational inference
-and MCMC alone, and does not depend on whether the free energy principle is true.
+本書は記号創発**システム**の数理理論である。記号創発ロボティクスのサーベイではなく、既存のサーベイ文献の構成を再現することは避けた。自由エネルギー原理の入門書でもない——ただし第13章がその関係を説明する。第I部・第II部の数理は変分推論とMCMCだけで閉じており、自由エネルギー原理の真偽には依存しない。
 
-Corrections and objections are welcome, in English or Japanese, while the book is still in
-draft. That is the reason it is in the open.
+ドラフトのあいだ、修正や反論を歓迎する。日本語でも英語でもよい。公開の場で書いているのは、そのためである。

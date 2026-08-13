@@ -6,210 +6,177 @@ number-sections: false
 
 **An Introduction to the Mathematical Theory of Symbol Emergence Systems**
 
-Tadahiro Taniguchi
+谷口忠大（Tadahiro Taniguchi）
 
-::: {.callout-important title="This book is being written. It is not a draft yet."}
-This site is a **placeholder for a public draft that does not exist yet**. No chapter has
-been written. What you see below is the plan: the aim of the book, its structure, and the
-core formulation it is organized around.
+::: {.callout-important title="本書は作成中です。ベータ版ですらありません。"}
+このサイトは**まだ存在しない公開ドラフトの置き場**です。本文はほとんど書かれていません。いま見えるのは計画——本書のねらい・構成・中核となる定式化——です。
 
-**Please do not cite, quote, or redistribute anything from this site.** Wording, notation,
-chapter numbering, and the table of contents are all expected to change. When a citable
-version exists, it will carry a DOI and this notice will be replaced.
+**このサイトの内容の引用・転載はお控えください。**文言・記法・章番号・目次はすべて変わる見込みです。引用可能な版ができたときに DOI を付与し、この注意書きを差し替えます。
 
-現在執筆中です。ベータ版ですらありません。**引用・転載はお控えください。**
+**This public draft is written in Japanese first; an English edition will follow as a
+translation.** Please do not cite, quote, or redistribute anything from this site.
 :::
 
-## What this book is
+## 本書について
 
-*Collective Predictive Coding* (CPC) is presented here as a **mathematical theory of symbol
-emergence systems**. The book has three aims:
+本書は、集合的予測符号化（Collective Predictive Coding; CPC）を**記号創発システムの数理理論**として体系化する教科書である。ねらいは三つある。
 
-1. To give CPC a systematic mathematical formulation as a theory of symbol emergence systems.
-2. To unify formulations that are currently scattered across individual papers, deriving them
-   as successive elaborations of a **single generative model**.
-3. To be usable as a foundational text beyond robotics — for CPC-MS and, more broadly, for
-   theories of symbol systems and intelligence.
+1. CPC を記号創発システムの理論として数理的に体系化する。
+2. 個別論文に散っている定式化を、**単一の生成モデル**からの積み上げとして統合する。
+3. ロボティクスを超えて——CPC-MS や、より広い記号システム・知性の基盤理論としても手に取られる本にする。
 
-## Positioning
+## 位置づけ
 
-CPC is not a theory of *symbol emergence*. It is a theory of **symbol emergence systems**.
-Its object is not only the process by which symbols arise, but the *system* in which the
-cognitive dynamics of individuals and the dynamics of a society's symbol system organize
-each other.
+CPC は「記号創発の理論」ではなく、**「記号創発システムの理論」**である。対象は記号が立ち上がる過程だけではなく、個体の認知ダイナミクスと社会の記号系ダイナミクスが相互依存しながら組織化されている**系そのもの**である。
 
-Three terms are kept distinct throughout the book:
+本書では次の三つの語を厳密に区別する。
 
-| Term | What it refers to |
+| 語 | 指すもの |
 |---|---|
-| **Symbol system** | The **product** of emergence. Corresponds to $w$. |
-| **Symbol emergence** | The **process** by which it arises. |
-| **Symbol emergence system** | The **system** in which that process takes place. |
+| **記号システム**（symbol system） | 創発の**産物**。$w$ に対応する |
+| **記号創発**（symbol emergence） | 立ち上がる**過程** |
+| **記号創発システム**（symbol emergence system） | その過程が生じている**系そのもの** |
 
-The Springer book *Symbol Emergence Systems* discusses what such systems are and how they
-look as a whole; this book supplies their mathematics. The two are companion volumes.
+Springer 書籍 *Symbol Emergence Systems* が系のありようと全体像を論じ、本書はその数理を与える。二冊は姉妹編である。本書は記号創発ロボティクス全般の概説ではなく、*Symbol Emergence in Robotics* の構成を繰り返さないことを明確な制約としている。
 
-This book is **not** a general survey of symbol emergence in robotics. Not repeating the
-structure of *Symbol Emergence in Robotics* is an explicit constraint on its design.
+### 想定読者
 
-### Intended readers
+- **主**: 情報学・認知科学・ロボティクスの大学院生以上
+- **副**: 言語学・人類学・社会学・科学論・経済学の大学院生
 
-- **Primary:** graduate students and researchers in informatics, cognitive science, and robotics.
-- **Secondary:** graduate students in linguistics, anthropology, sociology, science studies,
-  and economics.
+数学的背景の下限は変分ベイズ既習とし、数学的準備は本文ではなく付録に集める。
 
-Variational Bayes is assumed as the lower bound of mathematical background; mathematical
-preliminaries are collected in the appendices rather than in the main text.
+## 中核定式化
 
-## The core formulation
-
-The whole book is organized around one generative model,
+本書全体は一つの生成モデル
 
 $$
-p(w) \prod_{k=1}^{K} p(z_k \mid w)\, p(x_k \mid z_k),
+p(w) \prod_{k=1}^{K} p(z_k \mid w)\, p(x_k \mid z_k)
 $$
 
-and the collective posterior it induces,
+と、それが誘導する集合事後分布
 
 $$
-P(w \mid x_{1:K}) \;\propto\; p(w) \prod_{k=1}^{K} \int p(x_k \mid z_k)\, p(z_k \mid w)\, \mathrm{d}z_k .
+P(w \mid x_{1:K}) \;\propto\; p(w) \prod_{k=1}^{K} \int p(x_k \mid z_k)\, p(z_k \mid w)\, \mathrm{d}z_k
 $$
 
-Two constraints give this model its meaning:
+を軸に組織される。このモデルに意味を与えるのは二つの制約である。
 
-**Operational closure.** Agent $k$ has no access whatsoever to $z_j$ for $j \neq k$.
+**作動的閉鎖（operational closure）.** エージェント $k$ は $z_j\ (j \neq k)$ に一切アクセスできない。
 
-**Arbitrariness.** The relation between $w$ and $z$ is not an invertible map but a general
-probabilistic relation $P(w \mid z)$. Dimensions and types need not agree, and $w$ may be
-discrete or continuous.
+**恣意性（arbitrariness）.** $w$ と $z$ の関係は可逆写像ではなく、一般の確率的関係 $P(w \mid z)$ である。次元も型も一致しなくてよく、$w$ は離散にも連続にもなりうる。
 
-Chapters 1 and 2 state this formulation. Every later chapter can be read as a commentary on
-Chapter 2 — extensions are presented as *differences* from it: put $w_{1:T}$ into the
-equation, multiply in an optimality-variable term, let $w$ be continuous.
+第1〜2章でこの定式化を与える。以降のすべての章は第2章への注釈として読める——拡張は第2章の式からの*差分*として提示される（$w_{1:T}$ を入れる、最適性変数の項を掛ける、$w$ を連続にする）。
 
-Each chapter is built around a single proposition, typically of the form: *language game $G$
-is a correct inference algorithm for the posterior of generative model $\mathcal{M}$.* The
-theory is the collection of these propositions.
+各章は一つの命題を軸に構成される。典型的には「*言語ゲーム $G$ は生成モデル $\mathcal{M}$ の事後分布に対する正しい推論アルゴリズムである*」という形の命題であり、理論はこれらの命題の集合である。
 
-## How to read it
+## 読み方
 
-Readers who do not want to follow the mathematics can read
+数理的な導出を追わない読者は、
 
-> **Chapters 1–2 → Chapter 13 → Chapter 24 → Part VI → Chapter 31**
+> **第1・2章 → 第13章 → 第24章 → 第VI部 → 第31章**
 
-and skip the rest. This is a legitimate path through the book, not a shortcut.
-Every chapter opens with an intuitive summary in one paragraph and no equations,
-Appendix D gives a correspondence table between humanities/social-science and mathematical
-vocabulary, and Part VI does not depend on Part II.
+の順で読み、残りを飛ばしてよい。これは近道ではなく、正当な読み筋である。各章の冒頭には数式なしの直観的要約を置き、付録Dに人文社会系の語彙と数理の対応表を用意し、第VI部は第II部に依存しないように書く。
 
-## Table of contents
+## 目次（全31章）
 
-::: {.callout-note title="Provisional"}
-Chapter titles below are provisional English renderings of the plan and will be revised.
+**冒頭**
+
+- 序章　本書の読み方
+- 第1章　記号創発問題と二つの制約
+- 第2章　中核定式化
+
+**第I部　到達路** —— 第2章の式が天下りでないことを示す
+
+- 第3章　個体レベルの生成モデルと表現学習
+- 第4章　共同注意から平均場、そしてCPCへ
+- 第5章　生成モデルの一意性と分散性の公理化
+
+**第II部　推論アルゴリズム＝言語ゲーム**
+
+- 第6章　Metropolis-Hastings名付けゲーム
+- 第7章　一般化と再帰的MHNG
+- 第8章　共同注意名付けゲーム
+- 第9章　変分ベイズ名付けゲーム
+- 第10章　連続空間・ガウス過程と離散性の創発
+- 第11章　深層生成モデルと償却推論
+- 第12章　Langevin動力学と集合的サンプリング
+
+**第III部　集合的自由エネルギー**
+
+- 第13章　予測符号化と自由エネルギー原理
+- 第14章　分解と非加法性定理
+- 第15章　相構造と有限N補正
+
+**第IV部　行動とマルチエージェント**
+
+- 第16章　能動的推論
+- 第17章　Control as Inference
+- 第18章　系列CPCと集合世界モデル
+- 第19章　Generative EmCom
+- 第20章　MARL-CPC
+- 第21章　分散型集合世界モデルと協調
+- 第22章　ロボティクスにおける集合的予測符号化
+- 第23章　LLMは集合的世界モデルか
+- 第24章　System 0/1/2/3と集合的能動推論
+
+**第V部　性質の解析**
+
+- 第25章　恣意性と識別可能性
+- 第26章　合成性
+- 第27章　情報論的量
+- 第28章　収束と有限N
+
+**第VI部　同型な系**
+
+- 第29章　感情：内受容感覚と共有される感情語彙
+- 第30章　科学・市場・クオリア・儀礼
+
+**第VII部**
+
+- 第31章　未解決問題
+
+**付録**
+
+- 付録A　変分推論
+- 付録B　MCMC
+- 付録C　記法一覧
+- 付録D　用語対応表（人文社会系↔数理）
+- 付録E　論文ガイド：何から読むか
+
+## 執筆言語について
+
+本書は**日本語を正本（single source of truth）**として執筆し、英語版は日本語本文からの訳として作成する。Springer からの出版時には英語版が書籍となる。日英で内容が食い違う場合は日本語が正しい。
+
+## 進捗の表示
+
+執筆量と検証は**別々の軸**で表示する。AI を使うと執筆量だけが先行しうるため、一つの進捗率に混ぜない。
+
+**執筆量** — ⬜ 未着手 / ◽ 骨子のみ / ◨ 部分執筆 / ⬛ 一通り執筆
+
+**検証** — 🤖 AI出力のまま（*内容の正しさを一切保証しない*） / 👀 目視確認済 / ✅ 著者検証済
+
+::: {.callout-warning title="現在のステータス"}
+**ほぼ全章が ⬜〜◽ かつ 🤖 です。**このサイトの内容はまだ著者による検証を受けていません。章ごとのステータスは執筆の進行に応じて付けていきます。
 :::
 
-**Front matter**
+## コメント・修正提案
 
-- Prologue — How to Read This Book
-- 1. The Symbol Emergence Problem and Two Constraints
-- 2. The Core Formulation
+誤字・数式の誤りの指摘、内容への提案を歓迎します。**日本語・英語どちらでも**受け付けます。
 
-**Part I — Routes of Arrival** *(showing that the equation of Chapter 2 is not handed down from nowhere)*
+- **Issue を立てる:** <https://github.com/tanichu/cpc-textbook/issues>
 
-- 3. Individual-Level Generative Models and Representation Learning
-- 4. From Joint Attention to Mean Field, and on to CPC
-- 5. Axiomatizing the Uniqueness and Distributedness of the Generative Model
+簡単な取り決め：
 
-**Part II — Inference Algorithms as Language Games**
+- 寄せられた指摘・提案を出版される書籍に反映する権利は著者が持ちます（対価・共著権は生じません）。
+- 貢献者は謝辞に記載します。
 
-- 6. The Metropolis–Hastings Naming Game
-- 7. Generalization and Recursive MHNG
-- 8. The Joint Attention Naming Game
-- 9. The Variational Bayes Naming Game
-- 10. Continuous Spaces, Gaussian Processes, and the Emergence of Discreteness
-- 11. Deep Generative Models and Amortized Inference
-- 12. Langevin Dynamics and Collective Sampling
+章ごとのスレッド議論・インライン注釈・匿名フォームなどの追加チャンネルは検討中で、まだ用意されていません。
 
-**Part III — Collective Free Energy**
+## ライセンス
 
-- 13. Predictive Coding and the Free Energy Principle
-- 14. Decomposition and the Non-Additivity Theorem
-- 15. Phase Structure and Finite-$N$ Corrections
+**未定です。**ライセンスを告知するまでは全権利を留保します——再配布・二次利用はお控えください。Springer からの出版と衝突しないライセンスを選ぶ予定です。
 
-**Part IV — Action and Multi-Agent Systems**
+## 引用について
 
-- 16. Active Inference
-- 17. Control as Inference
-- 18. Sequential CPC and Collective World Models
-- 19. Generative EmCom
-- 20. MARL-CPC
-- 21. Decentralized Collective World Models and Cooperation
-- 22. Collective Predictive Coding in Robotics
-- 23. Are Large Language Models Collective World Models?
-- 24. System 0/1/2/3 and Collective Active Inference
-
-**Part V — Analysis of Properties**
-
-- 25. Arbitrariness and Identifiability
-- 26. Compositionality
-- 27. Information-Theoretic Quantities
-- 28. Convergence and Finite $N$
-
-**Part VI — Isomorphic Systems**
-
-- 29. Emotion: Interoception and a Shared Emotional Vocabulary
-- 30. Science, Markets, Qualia, and Ritual
-
-**Part VII**
-
-- 31. Open Problems
-
-**Appendices**
-
-- A. Variational Inference
-- B. Markov Chain Monte Carlo
-- C. Notation
-- D. Glossary: Humanities and Social Sciences ↔ Mathematics
-- E. A Guide to the Literature: Where to Start
-
-## Status
-
-Writing volume and verification are tracked as **two separate axes**. They are not combined
-into a single percentage, because drafting can run ahead of checking.
-
-**Writing volume** — ⬜ not started / ◽ outline only / ◨ partially written / ⬛ full draft
-
-**Verification** — 🤖 raw AI output (*correctness not guaranteed in any way*) /
-👀 visually checked / ✅ author-verified
-
-::: {.callout-warning title="Current status"}
-**All chapters are between ⬜ and ◽, and all are 🤖.** Nothing on this site has been
-verified by the author. Per-chapter status badges will be added as writing begins.
-:::
-
-## Comments and corrections
-
-Corrections and suggestions are welcome — typographical errors, mistakes in the mathematics,
-and proposals for the content alike. Comments may be written in **English or Japanese**.
-
-- **Open an issue:** <https://github.com/tanichu/cpc-textbook/issues>
-
-Terms, in brief:
-
-- The author reserves the right to reflect any comment or suggestion in the published book.
-  No compensation or claim of co-authorship arises from making one.
-- Contributors will be named in the acknowledgements.
-
-Additional channels (threaded discussion attached to each chapter, inline annotation, an
-anonymous form) are under consideration and are not yet available.
-
-## License
-
-**Not yet decided.** Until a license is announced, all rights are reserved: please do not
-redistribute or create derivative works. The intention is to choose a license that does not
-conflict with the eventual Springer publication.
-
-## Citing this work
-
-**Please do not cite it yet.** There is nothing here stable enough to cite. A DOI will be
-issued when a citable draft is released.
+**まだ引用しないでください。**引用に耐える安定した内容はここにはありません。引用可能なドラフトを公開する際に DOI を発行します。

@@ -2,6 +2,8 @@ project:
   type: book
   output-dir: docs
 
+lang: ja
+
 book:
   title: "Collective Predictive Coding"
   subtitle: "An Introduction to the Mathematical Theory of Symbol Emergence Systems"
@@ -14,7 +16,7 @@ book:
     style: docked
   page-footer:
     left: "© 2026 Tadahiro Taniguchi"
-    right: "Work in progress. Please do not cite or redistribute."
+    right: "執筆中のドラフトです。引用・転載はお控えください。"
   chapters:
     - index.qmd
     - chapters/00-how-to-read.qmd

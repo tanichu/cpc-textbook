@@ -17,6 +17,9 @@ A book giving a systematic mathematical formulation of Collective Predictive Cod
 as a theory of **symbol emergence systems**. It is planned for eventual publication by
 Springer; until then, public drafts are released here.
 
+**The draft is written in Japanese first** (Japanese is the single source of truth);
+the English edition will follow as a translation.
+
 Companion volume: the Springer book *Symbol Emergence Systems*, which discusses what such
 systems are; this book supplies their mathematics.
 
