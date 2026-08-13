@@ -20,6 +20,8 @@ book:
   chapters:
     - index.qmd
     - chapters/00-how-to-read.qmd
+  appendices:
+    - chapters/99-glossary-ja-en.qmd
 
 format:
   html:

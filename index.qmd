@@ -2,6 +2,8 @@
 number-sections: false
 ---
 
+![](figures/banner.jpg){fig-alt="川辺に集う人々とロボットが、飛び石で川を渡り、タブレットを囲んで語り合っている。空には光の粒がネットワークのようにつながっている。記号創発システムのイメージ" .banner-img}
+
 # Collective Predictive Coding {.unnumbered}
 
 **An Introduction to the Mathematical Theory of Symbol Emergence Systems**

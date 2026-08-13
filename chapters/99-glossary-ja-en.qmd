@@ -1,0 +1,39 @@
+# 訳語対照表（日英） {.unnumbered}
+
+::: {.callout-note appearance="simple"}
+本書の用語は日英で次のとおり対応させる。**2026-08-13 時点で著者確定済み。**本文（日本語正本）と英語訳の双方がこの表に従う。新しい用語は、本文で使う前にこの表に登録する。
+:::
+
+## 中核用語
+
+| 日本語 | English | 備考 |
+|---|---|---|
+| 記号創発システム | symbol emergence system | 記号創発（過程）・記号システム（産物）とは別物。混同しない |
+| 記号創発 | symbol emergence | 過程を指す |
+| 記号システム | symbol system | 産物を指す。$w$ に対応 |
+| 集合的予測符号化 | collective predictive coding | |
+| 集合的自由エネルギー | collective free energy | |
+| 分散的ベイズ推論 | decentralized Bayesian inference | |
+| 名付けゲーム | naming game | 既刊の一部の日本語論文では「命名ゲーム」だが、本書は「名付けゲーム」で統一する |
+| 作動的閉鎖 | operational closure | |
+| 恣意性 | arbitrariness | |
+| 内部表現 / 外部表現 | internal / external representation | |
+| 共同注意 | joint attention | |
+
+## 数理用語
+
+| 日本語 | English | 備考 |
+|---|---|---|
+| 生成モデル | generative model | |
+| 変分自由エネルギー | variational free energy | |
+| 期待自由エネルギー | expected free energy | |
+| 予測符号化 | predictive coding | |
+| 平均場 | mean field | |
+| 償却推論 | amortized inference | |
+| 最適性変数 | optimality variable | |
+| 確率推論による制御 | control as inference | 定訳がないため本書で定めた。初出時に原語を併記する |
+| 識別可能性 | identifiability | |
+| 合成性 | compositionality | |
+| 非加法性 | non-additivity | |
+| 世界モデル | world model | |
+| 創発コミュニケーション | emergent communication | generative emergent communication は「生成的創発コミュニケーション」 |
