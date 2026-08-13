@@ -1,0 +1,115 @@
+---
+title: "Prologue: How to Read This Book"
+---
+
+::: {.callout-note appearance="simple"}
+**Status** — Writing: ⬛ full draft · Verification: 🤖 raw AI output
+
+This chapter has not been checked by the author. Treat every claim in it as unverified.
+:::
+
+## Who this book is for
+
+This book is written first for graduate students and researchers in informatics, cognitive
+science, and robotics. If you have met variational Bayes and Markov chain Monte Carlo before,
+even briefly, you have what you need; the appendices supply the rest.
+
+It is written second, and deliberately, for graduate students in linguistics, anthropology,
+sociology, science studies, and economics. That second audience is not an afterthought. The
+central claim of this book is that symbol emergence systems are a single kind of object, and
+that the mathematics of that object does not care whether the symbols in question are words,
+prices, scientific concepts, or names for feelings. If that claim is right, then the people
+who study those systems from the outside should be able to reach the mathematics. Making that
+reachable is a design problem for the book, not a matter of goodwill.
+
+I have not solved that problem by lowering the mathematical level. The equations are the
+content, and softening them would leave nothing behind. I have tried to solve it structurally:
+by front-loading the core, by making every later chapter a marked difference from that core,
+by opening each chapter with a paragraph that states its claim without symbols, and by
+providing a glossary that maps the vocabulary of the humanities and social sciences onto the
+variables of the model.
+
+## Reading paths
+
+**If you want the argument without the derivations**, read:
+
+> Chapters 1 and 2 → Chapter 13 → Chapter 24 → Part VI → Chapter 31
+
+That is roughly a hundred pages. It will give you the problem, the core formulation, the
+connection to predictive coding and the free energy principle, the layered picture of
+cognition across timescales, the isomorphic systems, and the open problems. You will not have
+seen why the core formulation is the right one, and you will have to take the theorems on
+trust, but you will not be missing the point.
+
+I want to be explicit that this is a legitimate way to read the book, not a concession.
+Readers skip; the only question is whether they skip with a map or without one. Everything in
+Parts I through V is there because someone will want it, and no chapter in those parts is a
+prerequisite for the path above.
+
+**If you want the mathematics**, read Part I onward in order. Part I earns the formulation of
+Chapter 2, Part II supplies the algorithms, Part III the energetics, Part IV action and
+multiple agents, Part V the properties of the resulting systems.
+
+**If you came from a specific application** — from economics, from science studies, from
+affective science — go to Part VI first and work backwards when a chapter stops making sense.
+Part VI is written so that it does not depend on Part II. This costs some repetition, which I
+consider a fair price.
+
+## How the book is built
+
+**One chapter, one proposition.** Most chapters are organized around a single claim, and most
+of those claims have the same shape: *language game $G$ is a correct inference algorithm for
+the posterior of generative model $\mathcal{M}$*. The theory presented here is not a narrative
+but the collection of these propositions. Where a chapter has no such proposition, it is doing
+preparatory or interpretive work, and says so.
+
+**Chapters 1 and 2 carry the core.** Chapter 1 states the problem and the two constraints that
+every later chapter must respect. Chapter 2 gives the generative model and the collective
+posterior it induces. Everything after Chapter 2 can be read as a commentary on Chapter 2.
+
+**Extensions are shown as differences.** When a later chapter extends the model, it does so by
+modifying the equation of Chapter 2 in a stated way: put $w_{1:T}$ in place of $w$; multiply in
+a term for the optimality variable; let $w$ range over a continuous space. The same equation
+returns at the head of each such chapter, so that it is always clear what has changed and what
+has not. This is why the book can afford to be long without becoming hard to navigate.
+
+**Each chapter opens with a summary in words.** One paragraph, no symbols, stating what the
+chapter claims. These are not decoration. If you read only those paragraphs you will have a
+correct, if thin, account of the whole theory.
+
+**Mathematical preparation is in the appendices.** Appendix A covers variational inference and
+Appendix B covers Markov chain Monte Carlo. Neither is a substitute for a course, and both are
+there so that the main text does not have to stop and explain. Appendix C fixes notation.
+Appendix D is the glossary between the humanities and social sciences and the mathematics.
+Appendix E is a guide to the primary literature, organized by where you are coming from.
+
+## A word about the state of this text
+
+This book is being written in the open, and it is not finished. Nothing in it should be cited
+yet.
+
+Each chapter carries two independent marks, one for how much of it has been written and one
+for how far it has been checked. They are kept separate on purpose. Drafting can now run far
+ahead of verification, and a single combined percentage would hide exactly the gap that
+matters. A chapter can be complete in length and still be unverified prose; you are entitled
+to know which.
+
+**Writing** — ⬜ not started · ◽ outline only · ◨ partially written · ⬛ full draft
+
+**Verification** — 🤖 raw AI output · 👀 visually checked · ✅ author-verified
+
+A chapter marked 🤖 makes no claim to correctness of any kind. Its derivations may be wrong,
+its citations may be wrong, and its propositions may not be the ones the finished book will
+contain. When a chapter reaches ✅, the derivations and the citations in it have been checked
+by me.
+
+## A note on scope
+
+This book is a mathematical theory of symbol emergence *systems*. It is not a survey of symbol
+emergence in robotics, and I have avoided reproducing the structure of the earlier survey
+literature. It is also not an introduction to the free energy principle, though Chapter 13
+explains the relationship. The mathematics of Parts I and II closes with variational inference
+and MCMC alone, and does not depend on whether the free energy principle is true.
+
+Corrections and objections are welcome, in English or Japanese, while the book is still in
+draft. That is the reason it is in the open.

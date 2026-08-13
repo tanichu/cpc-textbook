@@ -17,6 +17,7 @@ book:
     right: "Work in progress. Please do not cite or redistribute."
   chapters:
     - index.qmd
+    - chapters/00-how-to-read.qmd
 
 format:
   html:
