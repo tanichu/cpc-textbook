@@ -30,6 +30,7 @@ book:
     - index.qmd
     - chapters/00-preface.qmd
     - chapters/01-symbol-emergence-systems.qmd
+    - chapters/02-the-mathematics.qmd
   appendices:
     - chapters/98-glossary-humanities.qmd
     - chapters/99-glossary-ja-en.qmd

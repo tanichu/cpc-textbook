@@ -72,7 +72,7 @@ translation.** Please do not cite, quote, or redistribute anything from this sit
 - 第12章　一般化と再帰的 MHNG
 - 第13章　共同注意名付けゲーム
 - 第14章　変分ベイズ名付けゲーム
-- 第15章　連続空間・ガウス過程と離散性の創発
+- 第15章　連続空間とガウス過程
 
 **第IV部　集合的自由エネルギー**
 
