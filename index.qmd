@@ -1,6 +1,7 @@
 ---
 title: "Collective Predictive Coding"
 subtitle: "An Introduction to the Mathematical Theory of Symbol Emergence Systems"
+number-sections: false
 ---
 
 ::: {.callout-important title="This book is being written. It is not a draft yet."}

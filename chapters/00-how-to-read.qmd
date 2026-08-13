@@ -1,6 +1,4 @@
----
-title: "Prologue: How to Read This Book"
----
+# Prologue: How to Read This Book {.unnumbered}
 
 ::: {.callout-note appearance="simple"}
 **Status** — Writing: ⬛ full draft · Verification: 🤖 raw AI output
