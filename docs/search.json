@@ -4,19 +4,19 @@
     "href": "index.html",
     "title": "Collective Predictive Coding",
     "section": "",
-    "text": "What this book is\nCollective Predictive Coding (CPC) is presented here as a mathematical theory of symbol emergence systems. The book has three aims:",
+    "text": "Collective Predictive Coding\nAn Introduction to the Mathematical Theory of Symbol Emergence Systems\nTadahiro Taniguchi",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Collective Predictive Coding</span>"
+      "Collective Predictive Coding"
     ]
   },
   {
     "objectID": "index.html#what-this-book-is",
     "href": "index.html#what-this-book-is",
     "title": "Collective Predictive Coding",
-    "section": "",
-    "text": "To give CPC a systematic mathematical formulation as a theory of symbol emergence systems.\nTo unify formulations that are currently scattered across individual papers, deriving them as successive elaborations of a single generative model.\nTo be usable as a foundational text beyond robotics — for CPC-MS and, more broadly, for theories of symbol systems and intelligence.",
+    "section": "What this book is",
+    "text": "What this book is\nCollective Predictive Coding (CPC) is presented here as a mathematical theory of symbol emergence systems. The book has three aims:\n\nTo give CPC a systematic mathematical formulation as a theory of symbol emergence systems.\nTo unify formulations that are currently scattered across individual papers, deriving them as successive elaborations of a single generative model.\nTo be usable as a foundational text beyond robotics — for CPC-MS and, more broadly, for theories of symbol systems and intelligence.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Collective Predictive Coding</span>"
+      "Collective Predictive Coding"
     ]
   },
   {
@@ -26,7 +26,7 @@
     "section": "Positioning",
     "text": "Positioning\nCPC is not a theory of symbol emergence. It is a theory of symbol emergence systems. Its object is not only the process by which symbols arise, but the system in which the cognitive dynamics of individuals and the dynamics of a society’s symbol system organize each other.\nThree terms are kept distinct throughout the book:\n\n\n\n\n\n\n\nTerm\nWhat it refers to\n\n\n\n\nSymbol system\nThe product of emergence. Corresponds to w.\n\n\nSymbol emergence\nThe process by which it arises.\n\n\nSymbol emergence system\nThe system in which that process takes place.\n\n\n\nThe Springer book Symbol Emergence Systems discusses what such systems are and how they look as a whole; this book supplies their mathematics. The two are companion volumes.\nThis book is not a general survey of symbol emergence in robotics. Not repeating the structure of Symbol Emergence in Robotics is an explicit constraint on its design.\n\nIntended readers\n\nPrimary: graduate students and researchers in informatics, cognitive science, and robotics.\nSecondary: graduate students in linguistics, anthropology, sociology, science studies, and economics.\n\nVariational Bayes is assumed as the lower bound of mathematical background; mathematical preliminaries are collected in the appendices rather than in the main text.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Collective Predictive Coding</span>"
+      "Collective Predictive Coding"
     ]
   },
   {
@@ -36,7 +36,7 @@
     "section": "The core formulation",
     "text": "The core formulation\nThe whole book is organized around one generative model,\n\np(w) \\prod_{k=1}^{K} p(z_k \\mid w)\\, p(x_k \\mid z_k),\n\nand the collective posterior it induces,\n\nP(w \\mid x_{1:K}) \\;\\propto\\; p(w) \\prod_{k=1}^{K} \\int p(x_k \\mid z_k)\\, p(z_k \\mid w)\\, \\mathrm{d}z_k .\n\nTwo constraints give this model its meaning:\nOperational closure. Agent k has no access whatsoever to z_j for j \\neq k.\nArbitrariness. The relation between w and z is not an invertible map but a general probabilistic relation P(w \\mid z). Dimensions and types need not agree, and w may be discrete or continuous.\nChapters 1 and 2 state this formulation. Every later chapter can be read as a commentary on Chapter 2 — extensions are presented as differences from it: put w_{1:T} into the equation, multiply in an optimality-variable term, let w be continuous.\nEach chapter is built around a single proposition, typically of the form: language game G is a correct inference algorithm for the posterior of generative model \\mathcal{M}. The theory is the collection of these propositions.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Collective Predictive Coding</span>"
+      "Collective Predictive Coding"
     ]
   },
   {
@@ -46,7 +46,7 @@
     "section": "How to read it",
     "text": "How to read it\nReaders who do not want to follow the mathematics can read\n\nChapters 1–2 → Chapter 13 → Chapter 24 → Part VI → Chapter 31\n\nand skip the rest. This is a legitimate path through the book, not a shortcut. Every chapter opens with an intuitive summary in one paragraph and no equations, Appendix D gives a correspondence table between humanities/social-science and mathematical vocabulary, and Part VI does not depend on Part II.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Collective Predictive Coding</span>"
+      "Collective Predictive Coding"
     ]
   },
   {
@@ -56,7 +56,7 @@
     "section": "Table of contents",
     "text": "Table of contents\n\n\n\n\n\n\nNoteProvisional\n\n\n\nChapter titles below are provisional English renderings of the plan and will be revised.\n\n\nFront matter\n\nPrologue — How to Read This Book\n\nThe Symbol Emergence Problem and Two Constraints\n\n\nThe Core Formulation\n\n\nPart I — Routes of Arrival (showing that the equation of Chapter 2 is not handed down from nowhere)\n\n\nIndividual-Level Generative Models and Representation Learning\n\n\nFrom Joint Attention to Mean Field, and on to CPC\n\n\nAxiomatizing the Uniqueness and Distributedness of the Generative Model\n\n\nPart II — Inference Algorithms as Language Games\n\n\nThe Metropolis–Hastings Naming Game\n\n\nGeneralization and Recursive MHNG\n\n\nThe Joint Attention Naming Game\n\n\nThe Variational Bayes Naming Game\n\n\nContinuous Spaces, Gaussian Processes, and the Emergence of Discreteness\n\n\nDeep Generative Models and Amortized Inference\n\n\nLangevin Dynamics and Collective Sampling\n\n\nPart III — Collective Free Energy\n\n\nPredictive Coding and the Free Energy Principle\n\n\nDecomposition and the Non-Additivity Theorem\n\n\nPhase Structure and Finite-N Corrections\n\n\nPart IV — Action and Multi-Agent Systems\n\n\nActive Inference\n\n\nControl as Inference\n\n\nSequential CPC and Collective World Models\n\n\nGenerative EmCom\n\n\nMARL-CPC\n\n\nDecentralized Collective World Models and Cooperation\n\n\nCollective Predictive Coding in Robotics\n\n\nAre Large Language Models Collective World Models?\n\n\nSystem 0/1/2/3 and Collective Active Inference\n\n\nPart V — Analysis of Properties\n\n\nArbitrariness and Identifiability\n\n\nCompositionality\n\n\nInformation-Theoretic Quantities\n\n\nConvergence and Finite N\n\n\nPart VI — Isomorphic Systems\n\n\nEmotion: Interoception and a Shared Emotional Vocabulary\n\n\nScience, Markets, Qualia, and Ritual\n\n\nPart VII\n\n\nOpen Problems\n\n\nAppendices\n\nA. Variational Inference\nB. Markov Chain Monte Carlo\nC. Notation\nD. Glossary: Humanities and Social Sciences ↔︎ Mathematics\nE. A Guide to the Literature: Where to Start",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Collective Predictive Coding</span>"
+      "Collective Predictive Coding"
     ]
   },
   {
@@ -66,7 +66,7 @@
     "section": "Status",
     "text": "Status\nWriting volume and verification are tracked as two separate axes. They are not combined into a single percentage, because drafting can run ahead of checking.\nWriting volume — ⬜ not started / ◽ outline only / ◨ partially written / ⬛ full draft\nVerification — 🤖 raw AI output (correctness not guaranteed in any way) / 👀 visually checked / ✅ author-verified\n\n\n\n\n\n\nWarningCurrent status\n\n\n\nAll chapters are between ⬜ and ◽, and all are 🤖. Nothing on this site has been verified by the author. Per-chapter status badges will be added as writing begins.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Collective Predictive Coding</span>"
+      "Collective Predictive Coding"
     ]
   },
   {
@@ -76,7 +76,7 @@
     "section": "Comments and corrections",
     "text": "Comments and corrections\nCorrections and suggestions are welcome — typographical errors, mistakes in the mathematics, and proposals for the content alike. Comments may be written in English or Japanese.\n\nOpen an issue: https://github.com/tanichu/cpc-textbook/issues\n\nTerms, in brief:\n\nThe author reserves the right to reflect any comment or suggestion in the published book. No compensation or claim of co-authorship arises from making one.\nContributors will be named in the acknowledgements.\n\nAdditional channels (threaded discussion attached to each chapter, inline annotation, an anonymous form) are under consideration and are not yet available.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Collective Predictive Coding</span>"
+      "Collective Predictive Coding"
     ]
   },
   {
@@ -86,7 +86,7 @@
     "section": "License",
     "text": "License\nNot yet decided. Until a license is announced, all rights are reserved: please do not redistribute or create derivative works. The intention is to choose a license that does not conflict with the eventual Springer publication.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Collective Predictive Coding</span>"
+      "Collective Predictive Coding"
     ]
   },
   {
@@ -96,7 +96,7 @@
     "section": "Citing this work",
     "text": "Citing this work\nPlease do not cite it yet. There is nothing here stable enough to cite. A DOI will be issued when a citable draft is released.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Collective Predictive Coding</span>"
+      "Collective Predictive Coding"
     ]
   },
   {

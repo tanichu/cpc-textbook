@@ -1,8 +1,12 @@
 ---
-title: "Collective Predictive Coding"
-subtitle: "An Introduction to the Mathematical Theory of Symbol Emergence Systems"
 number-sections: false
 ---
+
+# Collective Predictive Coding {.unnumbered}
+
+**An Introduction to the Mathematical Theory of Symbol Emergence Systems**
+
+Tadahiro Taniguchi
 
 ::: {.callout-important title="This book is being written. It is not a draft yet."}
 This site is a **placeholder for a public draft that does not exist yet**. No chapter has
