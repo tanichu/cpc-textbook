@@ -1,0 +1,45 @@
+/* ヘッダーバナー: 2枚を10秒ごとにクロスフェードで入れ替える */
+
+.banner-fade {
+  position: relative;
+  margin: 0 0 1.5rem 0;
+  line-height: 0;
+}
+
+.banner-fade img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* 2枚目を1枚目に重ね、透明度だけを動かす。
+   20秒周期＝各9秒表示＋1秒フェード。 */
+.banner-fade img + img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: banner-crossfade 20s ease-in-out infinite;
+}
+
+@keyframes banner-crossfade {
+  0%,
+  45% {
+    opacity: 0;
+  }
+  50%,
+  95% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* 動きを減らす設定の利用者には切り替えを見せない */
+@media (prefers-reduced-motion: reduce) {
+  .banner-fade img + img {
+    animation: none;
+    opacity: 0;
+  }
+}
