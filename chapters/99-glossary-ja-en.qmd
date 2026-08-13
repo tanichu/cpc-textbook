@@ -1,7 +1,7 @@
 # 訳語対照表（日英） {.unnumbered}
 
 ::: {.callout-note appearance="simple"}
-本書の用語は日英で次のとおり対応させる。**2026-08-13 時点で著者確定済み。**本文（日本語正本）と英語訳の双方がこの表に従う。新しい用語は、本文で使う前にこの表に登録する。
+本書の用語は日英で次のとおり対応させる。本文（日本語正本）と英語訳の双方がこの表に従う。新しい用語は、本文で使う前にこの表に登録し、本文採用時に確定する。
 :::
 
 ## 中核用語
@@ -15,10 +15,77 @@
 | 集合的自由エネルギー | collective free energy | |
 | 分散的ベイズ推論 | decentralized Bayesian inference | |
 | 名付けゲーム | naming game | 既刊の一部の日本語論文では「命名ゲーム」だが、本書は「名付けゲーム」で統一する |
-| 作動的閉鎖 | operational closure | |
+| 作動的閉鎖 | operational closure | 自己組織化系の作動が外部操作で規定されない性質。認知的閉鎖とは別概念 |
 | 恣意性 | arbitrariness | |
-| 内部表現 / 外部表現 | internal / external representation | |
+| 内部表現 | internal representation | |
+| 外部表現 | external representation | |
 | 共同注意 | joint attention | |
+| 記号創発ロボティクス | symbol emergence in robotics | 略称 SER。*Symbol Emergence in Robotics* 書名に合わせ in を入れる |
+| 記号創発問題 | symbol emergence problem | 略称 SEP。SGP とは別問題 |
+| 記号接地問題 | symbol grounding problem | 略称 SGP。古典的 AI の amodal 記号に関する問題 |
+| 物理記号系仮説 | physical symbol system hypothesis | 略称 PSSH |
+| 知覚的記号システム | perceptual symbol systems | 略称 PSS（Barsalou） |
+| マイクロ–マクロループ | micro-macro loop | SES の双方向ダイナミクス |
+| 社会的記号創発 | social symbol emergence | 個体学習を超えた記号系の創発 |
+| 創発的記号系 | emergent symbol system | 静的 langue ではなく動的に維持される記号系 |
+| 認知的閉鎖 | cognitive closure | 認識に必要な情報がエージェント自身の感覚運動系から獲得可能である制約。作動的閉鎖とは別概念 |
+| 構成論的アプローチ | constructive approach | synthetic approach / synthetic methodology と同義（本書表記） |
+| 自由エネルギー原理 | free energy principle | 略称 FEP |
+| 集合知 | collective intelligence | CPC における社会レベルの推論 |
+| ベイズ脳 | Bayesian brain | 個体レベルのベイズ推論の見方 |
+| ベイズ社会 | Bayesian society | CPC における社会レベルのベイズ推論の見方 |
+| 記号論的可塑性 | semiotic plasticity | 神経可塑性に対応する記号系側の可塑性 |
+| 神経可塑性 | neuronal plasticity | 個体内部表現の学習 |
+| ウムヴェルト | Umwelt | 種固有センサによる自己中心的環境世界 |
+| 生成科学 | generative science | CPC-MS の世界観。「生成 AI で科学する」とは別 |
+| 科学のモデルとしての集合的予測符号化 | collective predictive coding as a model of science | 略称 CPC-MS |
+| 共創学習 | co-creative learning | 教師あり／教師なしを超えた Human↔AI 双方向学習 |
+| 共生アライメント | symbiotic alignment | 階層的（一方的）アライメントの対 |
+| システム0/1/2/3 | System 0/1/2/3 | 身体（0）・個体速思考（1/2）・社会記号（3）の四層モデル |
+
+## 記号論・言語
+
+| 日本語 | English | 備考 |
+|---|---|---|
+| 記号過程 | semiosis | Peirce。記号の動的意味付け過程 |
+| 記号 | sign | Peirce 三項関係の一要素 |
+| 対象 | object | Peirce 三項関係の一要素 |
+| 解釈項 | interpretant | Peirce 三項関係の一要素 |
+| 能記 | signifier | Saussure |
+| 所記 | signified | Saussure |
+| 分節化 | articulation | 連続体を離散単位に切り分けること |
+| c-記号 | c-symbol | 計算記号（Steels） |
+| m-記号 | m-symbol | 人間的記号（Steels） |
+| コード（符号）と記号 | code vs. symbol | 池上「符号」と「記号」の区別 |
+| 言語ゲーム | language game | Wittgenstein / Steels |
+| 参照ゲーム | referential game | 深層学習ベース EC の代表設定 |
+| シグナリングゲーム | signaling game | Lewis のゲーム理論モデル |
+| メトロポリス–ヘイスティングス名付けゲーム | Metropolis-Hastings naming game | 略称 MHNG |
+| 共同注意名付けゲーム | joint attention naming game | 略称 JA-NG |
+| 反復学習モデル | iterated learning model | 略称 ILM。文化進化モデル |
+| 分布意味論 | distributional semantics | 共起統計に基づく語意味 |
+| 知覚的意味 | perceptual meaning | 身体接地に由来する意味 |
+| 統語的意味 | syntactic meaning | 分布統計に由来する意味 |
+
+## 認知・表象
+
+| 日本語 | English | 備考 |
+|---|---|---|
+| 概念 | concept | 推論・汎化を支える内部知識 |
+| カテゴリー | category | 同値扱いされる対象の集合 |
+| 局所表現 | local representation | 離散カテゴリの索引による表現 |
+| 分散表現 | distributed representation | 連続ベクトル等の複数次元に分散した表現 |
+| 抽象表現 | abstract representation | エンコーダ–デコーダ中間表現 |
+| クロスモーダル推論 | cross-modal inference | モダリティ間の相互推論 |
+| エンコーダ–デコーダモデル | encoder-decoder model | |
+| 確率的深層生成モデル | probabilistic deep generative model | 深層学習と確率生成モデルの融合 |
+| 確率グラフィカルモデル | probabilistic graphical model | 略称 PGM |
+| SERKET | SERKET | 要素 PGM を共有潜在変数でつなぐ認知アーキテクチャ。Nakamura et al. 2018 |
+| Neuro-SERKET | Neuro-SERKET | SERKET の要素を深層生成モデルにした枠。Taniguchi et al. 2020 |
+| 全脳確率的生成モデル | whole-brain probabilistic generative model | 略称 WB-PGM。要素 PGM を統合して学習する認知アーキテクチャ。Taniguchi et al. 2022 |
+| 形態計算 | morphological computation | System 0。身体ダイナミクスによる計算 |
+| 第1型世界モデル | Type 1 world model | 個体の感覚運動経験から学習される内部モデル |
+| 第2型世界モデル | Type 2 world model | 個体の直接経験に限定されない客観的・構造化された世界知 |
 
 ## 数理用語
 
@@ -32,8 +99,27 @@
 | 償却推論 | amortized inference | |
 | 最適性変数 | optimality variable | |
 | 確率推論による制御 | control as inference | 定訳がないため本書で定めた。初出時に原語を併記する |
-| 識別可能性 | identifiability | |
-| 合成性 | compositionality | |
-| 非加法性 | non-additivity | |
 | 世界モデル | world model | |
 | 創発コミュニケーション | emergent communication | generative emergent communication は「生成的創発コミュニケーション」 |
+| 予測誤差最小化 | prediction error minimization | 略称 PEM |
+| 証拠下限 | evidence lower bound | 略称 ELBO |
+| 変分推論 | variational inference | |
+| マルコフ連鎖モンテカルロ法 | Markov chain Monte Carlo | 略称 MCMC |
+| マルコフ連鎖 | Markov chain | |
+| 事前分布 | prior distribution | |
+| 事後分布 | posterior distribution | |
+| 集合事後分布 | collective posterior distribution | 複数エージェントの観測に条件づけられた共有表現の事後分布 |
+| 尤度 | likelihood | |
+| 尤度比 | likelihood ratio | |
+| 潜在変数 | latent variable | |
+| カルバック–ライブラー情報量 | Kullback–Leibler divergence | 略称 KL ダイバージェンス |
+| メトロポリス–ヘイスティングス法 | Metropolis-Hastings algorithm | 略称 MH 法 |
+| 受諾確率 | acceptance probability | MH 法における提案の受諾確率 |
+| 推論モデル | inference model | VAE 等の認識側 |
+| 推論ネットワーク | inference network | 推論モデルをニューラルネットワークで実装したもの |
+| 再パラメータ化トリック | reparameterization trick | VAE 学習 |
+| 個体予測誤差 | individual prediction error | CFE 分解の micro 項 |
+| 個体的正則化 | individual regularization | CFE 分解の top-down 項 |
+| 集合的正則化 | collective regularization | CFE 分解の macro 項 |
+| 変分ベイズ推論 | variational Bayesian inference | 略称 VBI |
+| 連合推論 | federated inference | 内部状態を直接共有しない分散推論 |
