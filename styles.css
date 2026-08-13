@@ -1,4 +1,4 @@
-/* ヘッダーバナー: 2枚を10秒ごとにクロスフェードで入れ替える */
+/* ヘッダーバナー: 4枚を10秒ごとにクロスフェードで巡回させる */
 
 .banner-fade {
   position: relative;
@@ -11,35 +11,43 @@
   width: 100%;
   height: auto;
   border-radius: 4px;
+  /* 40秒周期＝1枚あたり10秒（静止7秒＋フェード3秒） */
+  animation: banner-cycle 40s ease-in-out infinite;
 }
 
-/* 2枚目を1枚目に重ね、透明度だけを動かす。
-   20秒周期＝各7秒静止＋3秒フェード。切り替わりは10秒ごと。 */
-.banner-fade img + img {
+/* 1枚目だけを通常フローに残して高さを決め、残りを重ねる */
+.banner-fade img:not(:first-child) {
   position: absolute;
   top: 0;
   left: 0;
-  animation: banner-crossfade 20s ease-in-out infinite;
 }
 
-@keyframes banner-crossfade {
+/* 負の遅延で、各画像を10秒ずつずらして出す */
+.banner-fade img:nth-child(1) { animation-delay: 0s; }
+.banner-fade img:nth-child(2) { animation-delay: -30s; }
+.banner-fade img:nth-child(3) { animation-delay: -20s; }
+.banner-fade img:nth-child(4) { animation-delay: -10s; }
+
+@keyframes banner-cycle {
   0%,
-  35% {
-    opacity: 0;
-  }
-  50%,
-  85% {
+  17.5% {
     opacity: 1;
   }
-  100% {
+  25%,
+  92.5% {
     opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
 /* 動きを減らす設定の利用者には切り替えを見せない */
 @media (prefers-reduced-motion: reduce) {
-  .banner-fade img + img {
+  .banner-fade img {
     animation: none;
+  }
+  .banner-fade img:not(:first-child) {
     opacity: 0;
   }
 }
