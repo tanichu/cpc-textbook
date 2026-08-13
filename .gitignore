@@ -5,7 +5,8 @@ _sources/
 _notion/
 
 .quarto/
-# docs/ is committed: GitHub Pages serves main /docs
+# Build output. Pages deploys from GitHub Actions, so docs/ stays out of git.
+docs/
 _book/
 *.log
 *.aux
