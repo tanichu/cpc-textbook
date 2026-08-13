@@ -29,6 +29,7 @@ book:
   chapters:
     - index.qmd
     - chapters/00-preface.qmd
+    - chapters/01-symbol-emergence-systems.qmd
   appendices:
     - chapters/98-glossary-humanities.qmd
     - chapters/99-glossary-ja-en.qmd
