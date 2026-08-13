@@ -2,13 +2,7 @@
 number-sections: false
 ---
 
-![](figures/banner.jpg){fig-alt="川辺に集う人々とロボットが、飛び石で川を渡り、タブレットを囲んで語り合っている。空には光の粒がネットワークのようにつながっている。記号創発システムのイメージ" .banner-img}
-
-# Collective Predictive Coding {.unnumbered}
-
-**An Introduction to the Mathematical Theory of Symbol Emergence Systems**
-
-谷口忠大（Tadahiro Taniguchi）
+![](figures/banner.jpg){fig-alt="川辺に集う人々とロボットが、飛び石で川を渡り、タブレットを囲んで語り合っている。空には光の粒がネットワークのようにつながっている。記号創発システムのイメージ"}
 
 ::: {.callout-important title="本書は作成中です。ベータ版ですらありません。"}
 このサイトは**まだ存在しない公開ドラフトの置き場**です。本文はほとんど書かれていません。いま見えるのは計画——本書のねらい・構成・中核となる定式化——です。
