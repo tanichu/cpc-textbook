@@ -8,7 +8,7 @@
 
 | 日本語 | English | 備考 |
 |---|---|---|
-| 記号創発システム | symbol emergence system | 記号創発（過程）・記号システム（産物）とは別物。混同しない |
+| 記号創発システム | Symbol Emergence System | 記号創発（過程）・記号システム（産物）とは別物。混同しない |
 | 記号創発 | symbol emergence | 過程を指す |
 | 記号システム | symbol system | 産物を指す。$w$ に対応 |
 | 集合的予測符号化 | collective predictive coding | |
@@ -59,6 +59,7 @@
 | コード（符号）と記号 | code vs. symbol | 池上「符号」と「記号」の区別 |
 | 言語ゲーム | language game | Wittgenstein / Steels |
 | 参照ゲーム | referential game | 深層学習ベース EC の代表設定 |
+| 交差状況学習 | cross-situational learning | 多様な場面の統計から語と指示対象の対応を絞り込む学習。本書では扱わない |
 | シグナリングゲーム | signaling game | Lewis のゲーム理論モデル |
 | メトロポリス–ヘイスティングス名付けゲーム | Metropolis-Hastings naming game | 略称 MHNG |
 | 共同注意名付けゲーム | joint attention naming game | 略称 JA-NG |
